@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>bauSCHWABen UG & Co. KG – Fertigbauteile, Montage & Wartung | Vaihingen an der Enz</title>
+  <title>bauSCHWABen – Fertigbauteile, Montage & Wartung | Vaihingen an der Enz</title>
   <meta name="description" content="Ihr Spezialist für Fertigbauteile, professionelle Montage und zuverlässige Wartung in Vaihingen an der Enz und Umgebung. Jetzt Angebot anfordern!">
   <meta name="keywords" content="Bauunternehmen, Fertigbauteile, Montage, Wartung, Vaihingen an der Enz, Stuttgart, Baden-Württemberg, Normbauteile, Instandhaltung">
   <meta name="robots" content="index, follow">
@@ -12,7 +12,7 @@
   <meta property="og:description" content="Ihr zuverlässiger Partner für Bauvorhaben in Vaihingen an der Enz und Umgebung.">
   <meta property="og:type" content="business.business">
   <meta property="og:url" content="https://www.bauschwaben.de">
-  <meta property="og:image" content="https://www.bauschwaben.de/og-image.jpg">
+  <meta property="og:image" content="https://www.bauschwaben.de/logo.png">
   <meta property="business:contact_data:street_address" content="Stuttgarter Straße 36">
   <meta property="business:contact_data:locality" content="Vaihingen an der Enz">
   <meta property="business:contact_data:postal_code" content="71665">
@@ -23,148 +23,183 @@
   <meta name="twitter:description" content="Ihr zuverlässiger Partner für Bauvorhaben in Vaihingen an der Enz.">
   <link rel="canonical" href="https://www.bauschwaben.de">
   <style>
+    /* ═══════════════════════════════════════════
+       LOGO-PFAD – HIER DEIN LOGO EINFÜGEN
+       ═══════════════════════════════════════════ */
+    :root {
+      --bs-logo-path: url('logo.png');
+      
+      /* Farbpalette: Orange | Schwarz | Weiß */
+      --bs-orange: #E85D04;
+      --bs-orange-light: #FAA307;
+      --bs-orange-pale: #FFF3E0;
+      --bs-black: #0A0A0A;
+      --bs-black-soft: #1C1C1C;
+      --bs-gray-1: #333333;
+      --bs-gray-2: #666666;
+      --bs-gray-3: #999999;
+      --bs-gray-4: #CCCCCC;
+      --bs-white: #FFFFFF;
+      --bs-offwhite: #F9F9F9;
+      
+      --bs-radius: 10px;
+      --bs-radius-sm: 6px;
+      --bs-gap: 24px;
+      --bs-gap-lg: 48px;
+      --bs-max: 1100px;
+      --bs-t: 0.25s ease;
+    }
+
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#111;line-height:1.6;-webkit-font-smoothing:antialiased;background:#fff}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--bs-black);line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--bs-white)}
     a{color:inherit;text-decoration:none}ul{list-style:none}img{max-width:100%;display:block}
     button,input,textarea,select{font:inherit}
-    :root{--bs-accent:#0066ff;--bs-text:#111;--bs-text-2:#444;--bs-text-3:#666;--bs-text-4:#999;--bs-border:#e5e5e5;--bs-bg:#fff;--bs-bg-2:#f5f5f5;--bs-radius:10px;--bs-radius-sm:6px;--bs-gap:24px;--bs-gap-lg:48px;--bs-max:1100px;--bs-t:0.25s ease}
-    
+
     /* Header */
-    .bs-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--bs-border)}
-    .bs-header-inner{max-width:var(--bs-max);margin:0 auto;padding:0 var(--bs-gap);display:flex;align-items:center;justify-content:space-between;height:64px}
-    .bs-logo{font-size:20px;font-weight:500;letter-spacing:0.02em;display:flex;align-items:center;gap:10px}
-    .bs-logo svg{width:32px;height:32px;flex-shrink:0}
-    .bs-logo span{color:var(--bs-text-2)}
+    .bs-header{position:sticky;top:0;z-index:100;background:rgba(10,10,10,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08)}
+    .bs-header-inner{max-width:var(--bs-max);margin:0 auto;padding:0 var(--bs-gap);display:flex;align-items:center;justify-content:space-between;height:72px}
+    .bs-logo-img{height:40px;width:auto;display:block}
     .bs-nav{display:flex;gap:32px;align-items:center}
-    .bs-nav a{font-size:14px;font-weight:500;color:var(--bs-text-2);transition:color var(--bs-t);position:relative}
-    .bs-nav a:hover,.bs-nav a.active{color:var(--bs-text)}
-    .bs-nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--bs-text);transition:width var(--bs-t)}
+    .bs-nav a{font-size:14px;font-weight:500;color:var(--bs-gray-4);transition:color var(--bs-t);position:relative;letter-spacing:0.01em}
+    .bs-nav a:hover,.bs-nav a.active{color:var(--bs-orange-light)}
+    .bs-nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--bs-orange);transition:width var(--bs-t)}
     .bs-nav a:hover::after,.bs-nav a.active::after{width:100%}
-    .bs-cta-btn{background:var(--bs-text);color:var(--bs-bg);padding:8px 18px;border-radius:var(--bs-radius-sm);font-size:14px;font-weight:500;border:none;cursor:pointer;transition:opacity var(--bs-t)}
-    .bs-cta-btn:hover{opacity:0.85}
-    .bs-menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px}
+    .bs-cta-btn{background:var(--bs-orange);color:var(--bs-white);padding:10px 22px;border-radius:var(--bs-radius-sm);font-size:14px;font-weight:600;border:none;cursor:pointer;transition:background var(--bs-t),transform var(--bs-t);letter-spacing:0.02em}
+    .bs-cta-btn:hover{background:var(--bs-orange-light);transform:translateY(-1px)}
+    .bs-menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;color:var(--bs-white)}
     
     /* Hero */
-    .bs-hero{position:relative;padding:120px var(--bs-gap) 100px;max-width:var(--bs-max);margin:0 auto;overflow:hidden}
-    .bs-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--bs-gap-lg);align-items:center}
-    .bs-hero-content h1{font-size:clamp(36px,5vw,52px);font-weight:500;line-height:1.1;letter-spacing:-0.01em;margin-bottom:20px}
-    .bs-hero-content h1 em{font-style:normal;color:var(--bs-text-4)}
-    .bs-hero-content p{font-size:18px;color:var(--bs-text-2);max-width:480px;margin-bottom:32px;line-height:1.6}
+    .bs-hero{position:relative;background:var(--bs-black);color:var(--bs-white)}
+    .bs-hero-inner{max-width:var(--bs-max);margin:0 auto;padding:100px var(--bs-gap) 80px;display:grid;grid-template-columns:1fr 1fr;gap:var(--bs-gap-lg);align-items:center}
+    .bs-hero-content .bs-label{color:var(--bs-orange);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;display:block}
+    .bs-hero-content h1{font-size:clamp(36px,5vw,52px);font-weight:700;line-height:1.1;letter-spacing:-0.02em;margin-bottom:20px}
+    .bs-hero-content h1 em{font-style:normal;color:var(--bs-orange)}
+    .bs-hero-content p{font-size:18px;color:var(--bs-gray-4);max-width:480px;margin-bottom:32px;line-height:1.6}
     .bs-hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-    .bs-btn-primary{background:var(--bs-text);color:var(--bs-bg);padding:14px 28px;border-radius:var(--bs-radius-sm);font-size:15px;font-weight:500;border:none;cursor:pointer;transition:transform var(--bs-t),opacity var(--bs-t);display:inline-flex;align-items:center;gap:8px}
-    .bs-btn-primary:hover{transform:translateY(-1px);opacity:0.9}
-    .bs-btn-secondary{background:transparent;color:var(--bs-text);padding:14px 28px;border-radius:var(--bs-radius-sm);font-size:15px;font-weight:500;border:1.5px solid var(--bs-border);cursor:pointer;transition:background var(--bs-t),border-color var(--bs-t);display:inline-flex;align-items:center;gap:8px}
-    .bs-btn-secondary:hover{background:var(--bs-bg-2);border-color:var(--bs-text-3)}
-    .bs-hero-visual{position:relative;height:420px;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,var(--bs-bg-2) 0%,var(--bs-border) 100%)}
-    .bs-hero-visual::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(0,0,0,0.03) 20px,rgba(0,0,0,0.03) 21px),repeating-linear-gradient(-45deg,transparent,transparent 40px,rgba(0,0,0,0.02) 40px,rgba(0,0,0,0.02) 41px)}
-    .bs-hero-visual svg{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80%;height:auto;opacity:0.7}
-    .bs-hero-badge{position:absolute;top:24px;right:24px;background:var(--bs-bg);padding:10px 16px;border-radius:var(--bs-radius-sm);font-size:13px;font-weight:500;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;gap:8px}
+    .bs-btn-primary{background:var(--bs-orange);color:var(--bs-white);padding:14px 28px;border-radius:var(--bs-radius-sm);font-size:15px;font-weight:600;border:none;cursor:pointer;transition:background var(--bs-t),transform var(--bs-t);display:inline-flex;align-items:center;gap:8px;letter-spacing:0.01em}
+    .bs-btn-primary:hover{background:var(--bs-orange-light);transform:translateY(-1px)}
+    .bs-btn-secondary{background:transparent;color:var(--bs-white);padding:14px 28px;border-radius:var(--bs-radius-sm);font-size:15px;font-weight:500;border:1.5px solid var(--bs-gray-2);cursor:pointer;transition:border-color var(--bs-t),color var(--bs-t);display:inline-flex;align-items:center;gap:8px}
+    .bs-btn-secondary:hover{border-color:var(--bs-orange);color:var(--bs-orange-light)}
+    .bs-hero-visual{position:relative;height:380px;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,var(--bs-black-soft) 0%,#2a1a0a 100%);border:1px solid rgba(232,93,4,0.15)}
+    .bs-hero-visual::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(232,93,4,0.04) 20px,rgba(232,93,4,0.04) 21px),repeating-linear-gradient(-45deg,transparent,transparent 40px,rgba(232,93,4,0.03) 40px,rgba(232,93,4,0.03) 41px)}
+    .bs-hero-visual svg{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80%;height:auto;opacity:0.6;color:var(--bs-orange)}
+    .bs-hero-badge{position:absolute;top:24px;right:24px;background:var(--bs-black-soft);padding:10px 16px;border-radius:var(--bs-radius-sm);font-size:13px;font-weight:600;color:var(--bs-orange-light);border:1px solid rgba(232,93,4,0.25);display:flex;align-items:center;gap:8px}
     
     /* Stats */
-    .bs-stats{border-top:1px solid var(--bs-border);border-bottom:1px solid var(--bs-border);padding:32px var(--bs-gap)}
+    .bs-stats{background:var(--bs-orange);color:var(--bs-white);padding:40px var(--bs-gap)}
     .bs-stats-inner{max-width:var(--bs-max);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:var(--bs-gap);text-align:center}
-    .bs-stat strong{display:block;font-size:32px;font-weight:500;line-height:1.2;margin-bottom:4px;font-variant-numeric:tabular-nums}
-    .bs-stat span{font-size:14px;color:var(--bs-text-3)}
+    .bs-stat strong{display:block;font-size:36px;font-weight:700;line-height:1.2;margin-bottom:4px;font-variant-numeric:tabular-nums;color:var(--bs-white)}
+    .bs-stat span{font-size:14px;font-weight:500;color:rgba(255,255,255,0.85);text-transform:uppercase;letter-spacing:0.04em}
     
     /* Sections */
     .bs-section{padding:80px var(--bs-gap);max-width:var(--bs-max);margin:0 auto}
-    .bs-section-alt{background:var(--bs-bg-2)}
+    .bs-section-alt{background:var(--bs-offwhite)}
     .bs-section-alt .bs-section{background:transparent}
     .bs-section-header{margin-bottom:48px;max-width:600px}
-    .bs-section-header h2{font-size:clamp(28px,3.5vw,36px);font-weight:500;line-height:1.2;margin-bottom:12px}
-    .bs-section-header p{font-size:16px;color:var(--bs-text-2)}
-    .bs-label{display:inline-block;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;color:var(--bs-text-3);margin-bottom:12px}
+    .bs-section-header h2{font-size:clamp(28px,3.5vw,36px);font-weight:700;line-height:1.2;margin-bottom:12px;color:var(--bs-black)}
+    .bs-section-header p{font-size:16px;color:var(--bs-gray-2)}
+    .bs-label{display:inline-block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--bs-orange);margin-bottom:12px}
     
     /* Services */
     .bs-services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--bs-gap)}
-    .bs-service-card{border:1px solid var(--bs-border);border-radius:12px;padding:32px;transition:border-color var(--bs-t),box-shadow var(--bs-t);cursor:default}
-    .bs-service-card:hover{border-color:var(--bs-text-3);box-shadow:0 4px 24px rgba(0,0,0,0.04)}
-    .bs-service-icon{width:48px;height:48px;border-radius:10px;background:var(--bs-bg-2);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+    .bs-service-card{border:1px solid var(--bs-gray-4);border-radius:12px;padding:32px;transition:border-color var(--bs-t),box-shadow var(--bs-t),transform var(--bs-t);cursor:default;background:var(--bs-white)}
+    .bs-service-card:hover{border-color:var(--bs-orange);box-shadow:0 8px 32px rgba(232,93,4,0.08);transform:translateY(-2px)}
+    .bs-service-icon{width:48px;height:48px;border-radius:10px;background:var(--bs-orange-pale);display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--bs-orange)}
     .bs-service-icon svg{width:24px;height:24px}
-    .bs-service-card h3{font-size:18px;font-weight:500;margin-bottom:8px}
-    .bs-service-card p{font-size:15px;color:var(--bs-text-2);line-height:1.6}
+    .bs-service-card h3{font-size:18px;font-weight:600;margin-bottom:8px;color:var(--bs-black)}
+    .bs-service-card p{font-size:15px;color:var(--bs-gray-2);line-height:1.6}
     
     /* Why us */
     .bs-why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--bs-gap)}
     .bs-why-item{padding:24px 0}
-    .bs-why-item svg{width:28px;height:28px;margin-bottom:16px;color:var(--bs-text)}
-    .bs-why-item h4{font-size:16px;font-weight:500;margin-bottom:6px}
-    .bs-why-item p{font-size:14px;color:var(--bs-text-2);line-height:1.6}
+    .bs-why-item svg{width:28px;height:28px;margin-bottom:16px;color:var(--bs-orange)}
+    .bs-why-item h4{font-size:16px;font-weight:600;margin-bottom:6px;color:var(--bs-black)}
+    .bs-why-item p{font-size:14px;color:var(--bs-gray-2);line-height:1.6}
     
     /* Process */
     .bs-process{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--bs-gap);position:relative}
-    .bs-process::before{content:'';position:absolute;top:24px;left:12%;right:12%;height:1px;background:var(--bs-border);z-index:0}
+    .bs-process::before{content:'';position:absolute;top:24px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--bs-orange),var(--bs-orange-light));z-index:0;opacity:0.3}
     .bs-step{position:relative;z-index:1;text-align:center}
-    .bs-step-num{width:48px;height:48px;border-radius:50%;background:var(--bs-bg);border:1.5px solid var(--bs-border);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500;margin:0 auto 20px;transition:background var(--bs-t),border-color var(--bs-t),color var(--bs-t)}
-    .bs-step:hover .bs-step-num{background:var(--bs-text);border-color:var(--bs-text);color:var(--bs-bg)}
-    .bs-step h4{font-size:16px;font-weight:500;margin-bottom:6px}
-    .bs-step p{font-size:14px;color:var(--bs-text-2);line-height:1.5}
+    .bs-step-num{width:48px;height:48px;border-radius:50%;background:var(--bs-white);border:2px solid var(--bs-orange);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;margin:0 auto 20px;transition:background var(--bs-t),color var(--bs-t);color:var(--bs-orange)}
+    .bs-step:hover .bs-step-num{background:var(--bs-orange);color:var(--bs-white)}
+    .bs-step h4{font-size:16px;font-weight:600;margin-bottom:6px;color:var(--bs-black)}
+    .bs-step p{font-size:14px;color:var(--bs-gray-2);line-height:1.5}
     
     /* Contact */
     .bs-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--bs-gap-lg);align-items:start}
-    .bs-contact-info h3{font-size:22px;font-weight:500;margin-bottom:8px}
-    .bs-contact-info>p{color:var(--bs-text-2);margin-bottom:32px}
+    .bs-contact-info h3{font-size:22px;font-weight:700;margin-bottom:8px;color:var(--bs-black)}
+    .bs-contact-info>p{color:var(--bs-gray-2);margin-bottom:32px}
     .bs-contact-detail{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
-    .bs-contact-detail svg{width:20px;height:20px;margin-top:2px;flex-shrink:0;color:var(--bs-text-3)}
-    .bs-contact-detail div strong{display:block;font-size:14px;font-weight:500;margin-bottom:2px}
-    .bs-contact-detail div span,.bs-contact-detail div a{font-size:14px;color:var(--bs-text-2)}
-    .bs-contact-detail div a:hover{color:var(--bs-text);text-decoration:underline}
-    .bs-form{border:1px solid var(--bs-border);border-radius:12px;padding:32px;background:var(--bs-bg)}
+    .bs-contact-detail svg{width:20px;height:20px;margin-top:2px;flex-shrink:0;color:var(--bs-orange)}
+    .bs-contact-detail div strong{display:block;font-size:14px;font-weight:600;margin-bottom:2px;color:var(--bs-black)}
+    .bs-contact-detail div span,.bs-contact-detail div a{font-size:14px;color:var(--bs-gray-2)}
+    .bs-contact-detail div a:hover{color:var(--bs-orange);text-decoration:underline}
+    
+    /* Map */
+    .bs-map-wrap{border-radius:12px;overflow:hidden;border:1px solid var(--bs-gray-4);height:280px;margin-bottom:32px}
+    .bs-map-wrap iframe{width:100%;height:100%;border:0;filter:grayscale(20%) contrast(1.05)}
+    
+    .bs-form{border:1px solid var(--bs-gray-4);border-radius:12px;padding:32px;background:var(--bs-white)}
     .bs-form-group{margin-bottom:20px}
-    .bs-form-group label{display:block;font-size:13px;font-weight:500;margin-bottom:6px;color:var(--bs-text-2)}
-    .bs-form-group input,.bs-form-group textarea,.bs-form-group select{width:100%;padding:12px 14px;border:1.5px solid var(--bs-border);border-radius:var(--bs-radius-sm);font-size:15px;background:var(--bs-bg);color:var(--bs-text);transition:border-color var(--bs-t)}
-    .bs-form-group input:focus,.bs-form-group textarea:focus,.bs-form-group select:focus{outline:none;border-color:var(--bs-text-3)}
+    .bs-form-group label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--bs-gray-1)}
+    .bs-form-group input,.bs-form-group textarea,.bs-form-group select{width:100%;padding:12px 14px;border:1.5px solid var(--bs-gray-4);border-radius:var(--bs-radius-sm);font-size:15px;background:var(--bs-white);color:var(--bs-black);transition:border-color var(--bs-t)}
+    .bs-form-group input:focus,.bs-form-group textarea:focus,.bs-form-group select:focus{outline:none;border-color:var(--bs-orange)}
     .bs-form-group textarea{min-height:120px;resize:vertical}
-    .bs-form-group small{font-size:12px;color:var(--bs-text-4);margin-top:4px;display:block}
-    .bs-form-submit{width:100%;background:var(--bs-text);color:var(--bs-bg);padding:14px;border-radius:var(--bs-radius-sm);font-size:15px;font-weight:500;border:none;cursor:pointer;transition:opacity var(--bs-t)}
-    .bs-form-submit:hover{opacity:0.9}
+    .bs-form-group small{font-size:12px;color:var(--bs-gray-3);margin-top:4px;display:block}
+    .bs-form-submit{width:100%;background:var(--bs-orange);color:var(--bs-white);padding:14px;border-radius:var(--bs-radius-sm);font-size:15px;font-weight:600;border:none;cursor:pointer;transition:background var(--bs-t);letter-spacing:0.01em}
+    .bs-form-submit:hover{background:var(--bs-orange-light)}
     .bs-form-success{display:none;text-align:center;padding:40px 20px}
-    .bs-form-success svg{width:48px;height:48px;margin:0 auto 16px;color:#22c55e}
-    .bs-form-success h4{font-size:18px;font-weight:500;margin-bottom:8px}
-    .bs-form-success p{color:var(--bs-text-2);font-size:14px}
+    .bs-form-success svg{width:48px;height:48px;margin:0 auto 16px;color:var(--bs-orange)}
+    .bs-form-success h4{font-size:18px;font-weight:700;margin-bottom:8px;color:var(--bs-black)}
+    .bs-form-success p{color:var(--bs-gray-2);font-size:14px}
     
     /* Footer */
-    .bs-footer{border-top:1px solid var(--bs-border);padding:48px var(--bs-gap) 32px;max-width:var(--bs-max);margin:0 auto}
-    .bs-footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:var(--bs-gap);margin-bottom:40px}
-    .bs-footer-brand p{font-size:14px;color:var(--bs-text-2);margin-top:12px;line-height:1.6}
-    .bs-footer-col h5{font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:0.06em;color:var(--bs-text-3);margin-bottom:16px}
-    .bs-footer-col a{display:block;font-size:14px;color:var(--bs-text-2);margin-bottom:10px;transition:color var(--bs-t)}
-    .bs-footer-col a:hover{color:var(--bs-text)}
-    .bs-footer-bottom{border-top:1px solid var(--bs-border);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--bs-text-4);flex-wrap:wrap;gap:12px}
+    .bs-footer{background:var(--bs-black);color:var(--bs-white);padding:64px var(--bs-gap) 32px}
+    .bs-footer-inner{max-width:var(--bs-max);margin:0 auto}
+    .bs-footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:var(--bs-gap);margin-bottom:48px}
+    .bs-footer-brand .bs-logo-img{height:36px;width:auto;margin-bottom:16px;opacity:0.95}
+    .bs-footer-brand p{font-size:14px;color:var(--bs-gray-3);line-height:1.6;max-width:280px}
+    .bs-footer-col h5{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--bs-orange);margin-bottom:20px}
+    .bs-footer-col a{display:block;font-size:14px;color:var(--bs-gray-4);margin-bottom:12px;transition:color var(--bs-t)}
+    .bs-footer-col a:hover{color:var(--bs-orange-light)}
+    .bs-footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--bs-gray-3);flex-wrap:wrap;gap:12px}
     
     /* Mobile nav */
-    .bs-mobile-nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bs-bg);border-bottom:1px solid var(--bs-border);padding:16px var(--bs-gap);flex-direction:column;gap:4px}
-    .bs-mobile-nav a{padding:12px 0;font-size:15px;font-weight:500;color:var(--bs-text-2);border-bottom:1px solid var(--bs-border)}
+    .bs-mobile-nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--bs-black-soft);border-bottom:2px solid var(--bs-orange);padding:16px var(--bs-gap);flex-direction:column;gap:4px}
+    .bs-mobile-nav a{padding:14px 0;font-size:15px;font-weight:600;color:var(--bs-gray-4);border-bottom:1px solid rgba(255,255,255,0.06)}
     .bs-mobile-nav a:last-child{border-bottom:none}
+    .bs-mobile-nav a:hover{color:var(--bs-orange)}
     .bs-mobile-nav.open{display:flex}
     
     /* Scroll reveal */
-    .bs-reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+    .bs-reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
     .bs-reveal.visible{opacity:1;transform:translateY(0)}
     
     /* Responsive */
     @media(max-width:900px){
-      .bs-hero-grid{grid-template-columns:1fr}
-      .bs-hero-visual{height:280px;order:-1}
+      .bs-hero-inner{grid-template-columns:1fr;padding-top:60px;padding-bottom:60px}
+      .bs-hero-visual{height:260px;order:-1;margin-bottom:32px}
       .bs-services-grid{grid-template-columns:1fr}
       .bs-why-grid{grid-template-columns:1fr}
       .bs-process{grid-template-columns:1fr 1fr}
       .bs-process::before{display:none}
       .bs-contact-grid{grid-template-columns:1fr}
       .bs-footer-grid{grid-template-columns:1fr 1fr}
-      .bs-stats-inner{grid-template-columns:1fr 1fr;gap:24px 16px}
+      .bs-stats-inner{grid-template-columns:1fr 1fr;gap:32px 16px}
+      .bs-map-wrap{height:240px}
     }
     @media(max-width:640px){
       .bs-nav{display:none}
       .bs-menu-toggle{display:block}
-      .bs-hero{padding:60px var(--bs-gap) 50px}
       .bs-hero-content h1{font-size:32px}
       .bs-process{grid-template-columns:1fr}
       .bs-footer-grid{grid-template-columns:1fr}
       .bs-footer-bottom{flex-direction:column;text-align:center}
       .bs-stats-inner{grid-template-columns:1fr 1fr}
       .bs-section{padding:60px var(--bs-gap)}
+      .bs-hero-inner{padding-top:40px}
+      .bs-logo-img{height:34px}
     }
   </style>
 </head>
@@ -173,9 +208,8 @@
   <!-- Header -->
   <header class="bs-header">
     <div class="bs-header-inner">
-      <a href="#top" class="bs-logo" onclick="return bsScroll('top')">
-        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 28V14L16 6l12 8v14"/><path d="M12 28V18h8v10"/><path d="M2 14h28"/></svg>
-        <span>bau</span>SCHWABen
+      <a href="#top" onclick="return bsScroll('top')">
+        <img src="logo.png" alt="bauSCHWABen Logo" class="bs-logo-img" id="header-logo">
       </a>
       <nav class="bs-nav">
         <a href="#leistungen" onclick="return bsScroll('leistungen')">Leistungen</a>
@@ -198,7 +232,7 @@
 
   <!-- Hero -->
   <section class="bs-hero" id="top">
-    <div class="bs-hero-grid">
+    <div class="bs-hero-inner">
       <div class="bs-hero-content">
         <span class="bs-label">Bauunternehmen in Vaihingen an der Enz</span>
         <h1>Massiv gebaut.<br><em>Zuverlässig geliefert.</em></h1>
@@ -220,18 +254,18 @@
           Seit 2010 für Sie da
         </div>
         <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="80" y="120" width="240" height="140" rx="4" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
-          <rect x="100" y="160" width="60" height="60" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
-          <rect x="180" y="160" width="60" height="60" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
-          <rect x="260" y="160" width="40" height="100" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
-          <path d="M80 120 L200 50 L320 120" stroke="currentColor" stroke-width="1.5" opacity="0.3" fill="none"/>
-          <rect x="190" y="80" width="20" height="30" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.2"/>
-          <line x1="120" y1="200" x2="140" y2="200" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-          <line x1="120" y1="210" x2="140" y2="210" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-          <line x1="200" y1="200" x2="220" y2="200" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-          <line x1="200" y1="210" x2="220" y2="210" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-          <circle cx="200" cy="220" r="60" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
-          <circle cx="200" cy="220" r="100" stroke="currentColor" stroke-width="0.5" opacity="0.08"/>
+          <rect x="80" y="120" width="240" height="140" rx="4" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+          <rect x="100" y="160" width="60" height="60" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+          <rect x="180" y="160" width="60" height="60" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+          <rect x="260" y="160" width="40" height="100" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+          <path d="M80 120 L200 50 L320 120" stroke="currentColor" stroke-width="1.5" opacity="0.4" fill="none"/>
+          <rect x="190" y="80" width="20" height="30" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+          <line x1="120" y1="200" x2="140" y2="200" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+          <line x1="120" y1="210" x2="140" y2="210" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+          <line x1="200" y1="200" x2="220" y2="200" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+          <line x1="200" y1="210" x2="220" y2="210" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="200" cy="220" r="60" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
+          <circle cx="200" cy="220" r="100" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
         </svg>
       </div>
     </div>
@@ -295,15 +329,15 @@
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center">
         <div class="bs-reveal">
-          <p style="font-size:16px;color:var(--bs-text-2);line-height:1.7;margin-bottom:20px">Die <strong>bauSCHWABen UG & Co. KG</strong> ist Ihr zuverlässiger Partner für Bauvorhaben in Vaihingen an der Enz und Umgebung. Seit unserer Gründung stehen wir für solide Handwerkskunst, transparente Kommunikation und termingerechte Umsetzung.</p>
-          <p style="font-size:16px;color:var(--bs-text-2);line-height:1.7;margin-bottom:24px">Unser Fokus liegt auf dem Handel und der Montage von vorgefertigten Normbauteilen – ein Bereich, in dem Präzision und Fachwissen entscheidend sind. Egal ob Neubau, Sanierung oder Erweiterung: Wir bringen Ihr Projekt sicher ans Ziel.</p>
+          <p style="font-size:16px;color:var(--bs-gray-2);line-height:1.7;margin-bottom:20px">Die <strong style="color:var(--bs-black)">bauSCHWABen UG & Co. KG</strong> ist Ihr zuverlässiger Partner für Bauvorhaben in Vaihingen an der Enz und Umgebung. Seit unserer Gründung stehen wir für solide Handwerkskunst, transparente Kommunikation und termingerechte Umsetzung.</p>
+          <p style="font-size:16px;color:var(--bs-gray-2);line-height:1.7;margin-bottom:24px">Unser Fokus liegt auf dem Handel und der Montage von vorgefertigten Normbauteilen – ein Bereich, in dem Präzision und Fachwissen entscheidend sind. Egal ob Neubau, Sanierung oder Erweiterung: Wir bringen Ihr Projekt sicher ans Ziel.</p>
           <div style="display:flex;gap:24px;flex-wrap:wrap">
-            <div><strong style="font-size:28px;font-weight:500;display:block;margin-bottom:2px">100%</strong><span style="font-size:13px;color:var(--bs-text-3)">Regionale Verankerung</span></div>
-            <div><strong style="font-size:28px;font-weight:500;display:block;margin-bottom:2px">0</strong><span style="font-size:13px;color:var(--bs-text-3)">Kompromisse bei der Qualität</span></div>
+            <div><strong style="font-size:28px;font-weight:700;display:block;margin-bottom:2px;color:var(--bs-orange)">100%</strong><span style="font-size:13px;color:var(--bs-gray-3)">Regionale Verankerung</span></div>
+            <div><strong style="font-size:28px;font-weight:700;display:block;margin-bottom:2px;color:var(--bs-orange)">0</strong><span style="font-size:13px;color:var(--bs-gray-3)">Kompromisse bei der Qualität</span></div>
           </div>
         </div>
-        <div class="bs-reveal" style="border-radius:12px;overflow:hidden;background:var(--bs-bg);border:1px solid var(--bs-border);height:320px;display:flex;align-items:center;justify-content:center;position:relative">
-          <svg viewBox="0 0 300 200" fill="none" style="width:80%;height:auto;opacity:0.6">
+        <div class="bs-reveal" style="border-radius:12px;overflow:hidden;background:var(--bs-white);border:1px solid var(--bs-gray-4);height:320px;display:flex;align-items:center;justify-content:center;position:relative">
+          <svg viewBox="0 0 300 200" fill="none" style="width:80%;height:auto;opacity:0.5;color:var(--bs-orange)">
             <rect x="40" y="80" width="220" height="100" rx="2" stroke="currentColor" stroke-width="1"/>
             <path d="M40 80 L150 20 L260 80" stroke="currentColor" stroke-width="1" fill="none"/>
             <rect x="120" y="110" width="60" height="50" rx="2" stroke="currentColor" stroke-width="1"/>
@@ -405,6 +439,12 @@
       <div class="bs-contact-info bs-reveal">
         <h3>bauschwaben UG & Co. KG</h3>
         <p>Ihr Partner für Fertigbauteile, Montage und Wartung im Raum Stuttgart.</p>
+        
+        <!-- Google Maps / OpenStreetMap -->
+        <div class="bs-map-wrap">
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=8.9494%2C48.9225%2C8.9694%2C48.9425&amp;layer=mapnik&amp;marker=48.9325%2C8.9594" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Standort bauSCHWABen"></iframe>
+        </div>
+        
         <div class="bs-contact-detail">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <div><strong>Adresse</strong><span>Stuttgarter Straße 36<br>71665 Vaihingen an der Enz</span></div>
@@ -465,37 +505,36 @@
 
   <!-- Footer -->
   <footer class="bs-footer">
-    <div class="bs-footer-grid">
-      <div class="bs-footer-brand">
-        <div class="bs-logo">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 28V14L16 6l12 8v14"/><path d="M12 28V18h8v10"/><path d="M2 14h28"/></svg>
-          <span>bau</span>SCHWABen
+    <div class="bs-footer-inner">
+      <div class="bs-footer-grid">
+        <div class="bs-footer-brand">
+          <img src="logo.png" alt="bauSCHWABen Logo" class="bs-logo-img" id="footer-logo">
+          <p>Ihr Spezialist für Fertigbauteile, Montage und Wartung in Vaihingen an der Enz und Umgebung.</p>
         </div>
-        <p>Ihr Spezialist für Fertigbauteile, Montage und Wartung in Vaihingen an der Enz und Umgebung.</p>
+        <div class="bs-footer-col">
+          <h5>Navigation</h5>
+          <a href="#leistungen" onclick="return bsScroll('leistungen')">Leistungen</a>
+          <a href="#ueber" onclick="return bsScroll('ueber')">Über uns</a>
+          <a href="#ablauf" onclick="return bsScroll('ablauf')">Ablauf</a>
+          <a href="#kontakt" onclick="return bsScroll('kontakt')">Kontakt</a>
+        </div>
+        <div class="bs-footer-col">
+          <h5>Rechtliches</h5>
+          <a href="#" onclick="alert('Hier würde das Impressum stehen.')">Impressum</a>
+          <a href="#" onclick="alert('Hier würde die Datenschutzerklärung stehen.')">Datenschutz</a>
+          <a href="#" onclick="alert('Hier würden die AGB stehen.')">AGB</a>
+        </div>
+        <div class="bs-footer-col">
+          <h5>Kontakt</h5>
+          <a href="tel:+4970428143999">+49 7042 8143999</a>
+          <a href="mailto:info@bauschwaben.de">info@bauschwaben.de</a>
+          <span style="font-size:14px;color:var(--bs-gray-3);display:block;margin-top:4px">Stuttgarter Straße 36<br>71665 Vaihingen a.d. Enz</span>
+        </div>
       </div>
-      <div class="bs-footer-col">
-        <h5>Navigation</h5>
-        <a href="#leistungen" onclick="return bsScroll('leistungen')">Leistungen</a>
-        <a href="#ueber" onclick="return bsScroll('ueber')">Über uns</a>
-        <a href="#ablauf" onclick="return bsScroll('ablauf')">Ablauf</a>
-        <a href="#kontakt" onclick="return bsScroll('kontakt')">Kontakt</a>
+      <div class="bs-footer-bottom">
+        <span>© 2026 bauSCHWABen UG & Co. KG – Alle Rechte vorbehalten.</span>
+        <span>Handwerk mit Leidenschaft.</span>
       </div>
-      <div class="bs-footer-col">
-        <h5>Rechtliches</h5>
-        <a href="#" onclick="alert('Hier würde das Impressum stehen.')">Impressum</a>
-        <a href="#" onclick="alert('Hier würde die Datenschutzerklärung stehen.')">Datenschutz</a>
-        <a href="#" onclick="alert('Hier würden die AGB stehen.')">AGB</a>
-      </div>
-      <div class="bs-footer-col">
-        <h5>Kontakt</h5>
-        <a href="tel:+4970428143999">+49 7042 8143999</a>
-        <a href="mailto:info@bauschwaben.de">info@bauschwaben.de</a>
-        <span style="font-size:14px;color:var(--bs-text-2);display:block;margin-top:4px">Stuttgarter Straße 36<br>71665 Vaihingen a.d. Enz</span>
-      </div>
-    </div>
-    <div class="bs-footer-bottom">
-      <span>© 2026 bauSCHWABen UG & Co. KG – Alle Rechte vorbehalten.</span>
-      <span>Handwerk mit Leidenschaft.</span>
     </div>
   </footer>
 
@@ -552,13 +591,13 @@
   </script>
 
   <script>
-    function bsScroll(id){const el=document.getElementById(id);if(el){const top=el.getBoundingClientRect().top+window.scrollY-70;window.scrollTo({top:top,behavior:'smooth'});return false}return false}
+    function bsScroll(id){const el=document.getElementById(id);if(el){const top=el.getBoundingClientRect().top+window.scrollY-80;window.scrollTo({top:top,behavior:'smooth'});return false}return false}
     function bsToggleMenu(){document.getElementById('mobile-nav').classList.toggle('open')}
     function bsSubmit(e){e.preventDefault();const btn=e.target.querySelector('.bs-form-submit');btn.textContent='Wird gesendet...';btn.disabled=true;setTimeout(()=>{document.getElementById('contact-form').style.display='none';document.getElementById('form-success').style.display='block'},800)}
     const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
     document.querySelectorAll('.bs-reveal').forEach(el=>obs.observe(el));
     const secs=['leistungen','ueber','ablauf','kontakt'];
-    window.addEventListener('scroll',()=>{let c='';secs.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-120)c=id});document.querySelectorAll('.bs-nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+c))});
+    window.addEventListener('scroll',()=>{let c='';secs.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-130)c=id});document.querySelectorAll('.bs-nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+c))});
   </script>
 </body>
 </html>
